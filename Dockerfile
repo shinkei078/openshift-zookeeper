@@ -9,6 +9,8 @@ ENV ZK_USER=zookeeper \
 
 COPY fix-permissions /usr/local/bin
 
+COPY RPM-GPG-KEY-CentOS-7 /etc/pki/rpm-gpg
+
 COPY Centos-Base.repo /etc/yum.repos.d
 
 RUN INSTALL_PKGS="gettext tar zip unzip hostname nmap-ncat java-1.8.0-openjdk" && \
